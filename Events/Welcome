@@ -1,0 +1,110 @@
+{
+  "name": "Welcome",
+  "temp": "member",
+  "event-type": "6",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "stop",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "servername",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "icon",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "13",
+      "storage": "1",
+      "varName2": "channelist",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "15",
+      "storage": "1",
+      "varName2": "memberlist",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "2",
+      "varName": "memberlist",
+      "info": "7",
+      "storage": "1",
+      "varName2": "member",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "2",
+      "varName": "memberlist",
+      "info": "3",
+      "storage": "1",
+      "varName2": "member",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "find": "welcome",
+      "storage": "1",
+      "varName": "logch",
+      "name": "Find Channel"
+    },
+    {
+      "title": "✨ Welcome ✨",
+      "author": "",
+      "color": "#ff0006",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"icon\")}",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Welcome ${tempVars(\"member\")} to **${tempVars(\"servername\")}**💎\n\nHope you enjoy your stay, Please dont forget to read the ${tempVars(\"ruleschannel\")} 📜\n\nWouldnt want them getting broken! 💥\n\n",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "© Copyrights 2018-2019 - Nukkitx.com - Developer augesrob#7267",
+      "footerIcon": "https://raw.githubusercontent.com/Nukkit/Nukkit/master/images/logo.png",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "logch",
+      "name": "Send Embed Message"
+    }
+  ],
+  "restriction": "0",
+  "_id": "vGgNw",
+  "permissions": "NONE"
+}

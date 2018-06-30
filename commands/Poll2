@@ -1,0 +1,73 @@
+{
+  "name": "tPoll",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "1",
+      "find": "poll",
+      "storage": "1",
+      "varName": "poll",
+      "name": "Find Channel"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "PollQ",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "5",
+      "varName": "poll",
+      "message": "Please Specify a question you want to ask\nMust have more then 3 words to work!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "5",
+      "varName": "poll",
+      "message": "YES     |     NO",
+      "storage": "1",
+      "varName2": "Pollembed",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Pollembed",
+      "emoji": "4",
+      "varName2": "➕",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "Pollembed",
+      "emoji": "4",
+      "varName2": "➖",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "Pollembed",
+      "name": "Pin Message"
+    }
+  ],
+  "_id": "goUZm",
+  "comType": "0"
+}

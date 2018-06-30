@@ -1,0 +1,18 @@
+{
+  "name": "Join",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "YFvov",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    }
+  ]
+}

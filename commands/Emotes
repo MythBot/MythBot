@@ -1,0 +1,28 @@
+{
+  "name": "Emotes",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "YIZPO",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "words",
+      "name": "Store Command Params"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "var words = tempVars(\"words\");\n\nif(!words) {words = \"emolets\"}\n\nlet word = \"\";\n\nfunction GetCharacter(input){  \n    if((\"abcdefghijklmnopqrstuvwxyz\").includes(input)){\n        return ':regional_indicator_' + input + \":\";\n    }else{  \n        switch (input) {\n            case \"0\":\n                return ':zero:'\n                break;\n            case \"1\":\n                return ':one:'\n                break;\n            case \"2\":\n                return ':two:'\n                break;\n            case \"3\":\n                return ':three:'\n                break;\n            case \"4\":\n                return ':four:'\n                break;\n            case \"5\":\n                return ':five:'\n                break;\n            case \"6\":\n                return ':six:'\n                break;\n            case \"7\":\n                return ':seven:'\n                break;\n            case \"8\":\n                return ':eight:'\n                break;\n            case \"9\":\n                return ':nine:'\n                break;\n            case \"!\":\n                return ':grey_exclamation:'\n                break;\n            case \"<\":\n                return ':arrow_backward:'\n                break;\n            case \">\":\n                return ':arrow_forward:'\n                break;\n            case \",\":\n                return ','\n                break;\n            case \".\":\n                return '.'\n                break;\n            case \"@\":\n                return '@'\n                break;\n            default:\n                return ' ' \n                break;\n        }\n    }\t\n}\n//:arrow_backward: \nwords.toLowerCase().split('').forEach(function(char){ word += char ? GetCharacter(char) : \" \"})\n\nif(word && word.length < 1999){\n    msg.channel.send(word)\n}else{\n    msg.channel.send('That message is to long! After the conversion you had ' + (word ? word.length : \"n/a\") +'/1999 characters')\n}",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    }
+  ],
+  "comType": "0",
+  "_aliases": [
+    "emote",
+    "text"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "meme",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "LAxol",
+  "actions": [
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://api.giphy.com/v1/gifs/random?api_key=1mMEuxxA30caYONlwLSAtHsGRbossDWU&tag=dank pepe memes&rating=R",
+      "path": "$.data.image_url",
+      "storage": "1",
+      "varName": "meme",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "😈 Random Memes 😈\n${tempVars(\"meme\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}

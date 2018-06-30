@@ -1,0 +1,809 @@
+{
+  "name": "Slots",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "aPnLZ",
+  "actions": [
+    {
+      "comment": "Requested command, Simple Slots Command.",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "comparison": "4",
+      "value": "15",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "107",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Spinning**",
+      "storage": "1",
+      "varName2": "spinmessage",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "min": "1",
+      "max": "25",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "spinmessage",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "11",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💓💓💚\n💜💙💛\n💜💛💙\nLost $15. ",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "15",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💓💓💚\n💚💙💚\n💜💛💓\nLost $15. ",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "19",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💚💜💚\n💙💙💙\n💜💚💙\n3 💙's \n**Earn $45**\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "45",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "23",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💚💜💚\n💜💗💗\n💜💚💚\nLost $15 \n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "5",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "27",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💚💜💛\n💜💚💛\n💜💚💓\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "6",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "31",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💚💓💚\n💛💛💛\n💛💚💓\n3 💛's \n**Earn $27**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "27",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "7",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "35",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💖💜💖\n💜💚💛\n💛💚💓\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "8",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "39",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💚💚💛\n💜💓💓\n💚💛💓\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "9",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "43",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💚💜💓\n💜💜💜\n💜💚💓\n3 💜's \n**Earn $100**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "100",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "10",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "47",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💚💜💛\n💓💓💓\n💛💛💓\n3 💓's \n**Earn $70**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "70",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "11",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "51",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💖💜💖\n💜💓💖\n💛💚💜\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "12",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "55",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💖💓💛\n💜💚💜\n💛💖💓\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "13",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "59",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💚💜💜\n💖💖💖\n💓💚💓\n3 💖's \n**Win $140**\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "140",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "14",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "63",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💛💜💜\n💜💚💛\n💛💚💜\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "15",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "67",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💖💜💖\n💜💚💛\n💚💚💖\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "16",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "71",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💗💜💜\n💜💚💚\n💚💚💗\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "17",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "75",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💚💜💚\n💗💗💗\n💚💖💖\n3 💗's \n**Earn $170**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "170",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "18",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "79",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💙💜💙\n💚💚💚\n💜💜💙\n3 💚's \n**Earn $200**\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "200",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "19",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "83",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💛💜💖\n💛💚💛\n💚💚💖\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "20",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "87",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💖💜💖\n💜💚💛\n💚💜💜\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "21",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "91",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💛💜💚\n💜💛💜\n💚💜💜\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "22",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "95",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💛💜💚\n💖💛💖\n💚💜💚\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "23",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "99",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💛💙💙\n💘💘💘\n💚💙💙\n3 💘's \n**Earn $360**\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "360",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "24",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "103",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💛💙💙\n💛💙💚\n💚💙💚\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "randomslots",
+      "comparison": "1",
+      "value": "25",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💛💙💙\n💘💙💚\n💚💙💛\nLost $15\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-15",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Sorry, You don't have enough money to play**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0"
+}

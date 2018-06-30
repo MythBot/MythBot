@@ -1,0 +1,235 @@
+{
+  "name": "Snowball",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "message": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "CommandAuthor",
+      "name": "Store Message Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}",
+      "storage": "1",
+      "varName2": "SnowballHitMessage",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "min": "1",
+      "max": "9",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at  ${mentionedUser}\n\n```\nLoading\n```",
+      "name": "Edit Message"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at  ${mentionedUser}\n\n```\nLoading.\n```",
+      "name": "Edit Message"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at  ${mentionedUser}\n\n```\nLoading..\n```",
+      "name": "Edit Message"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at  ${mentionedUser}\n\n```\nLoading...\n```",
+      "name": "Edit Message"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "11",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}\n\n\"It's a **MISS**\"",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "comparison": "2",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "14",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}\n\n\"Its hits ${mentionedUser} in the face!\"",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "comparison": "2",
+      "value": "3",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "17",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}\n\n\"It hits ${mentionedUser} in the shoulder!\"",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "comparison": "2",
+      "value": "4",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "20",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}\n\n\"It hits ${mentionedUser} in the crotch!\"",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "comparison": "2",
+      "value": "5",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "23",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}\n\n\"It hits ${mentionedUser} in the legs!\"",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "comparison": "2",
+      "value": "6",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "26",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}\n\n\"It misses and hits the **discord servers**!!\"",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "comparison": "2",
+      "value": "7",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "29",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}\n\n\"It hits ${mentionedUser} in the face, **AND IT WAS YELLOW!**\"",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "comparison": "2",
+      "value": "8",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "32",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}\n\n\"Hits ${mentionedUser} in the crotch, **AND IT WAS YELLOW!**\"",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowbalHitOrMiss",
+      "comparison": "2",
+      "value": "9",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "33",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "SnowballHitMessage",
+      "message": "${tempVars(\"CommandAuthor\")} throws a snowball at ${mentionedUser}\n\n\"It Misses...wait.. **WAS THAT SNOWBALL YELLOW!?!?**\"",
+      "name": "Edit Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "_id": "AbjbJ"
+}

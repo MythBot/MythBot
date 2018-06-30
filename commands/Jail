@@ -1,0 +1,59 @@
+{
+  "name": "Jail",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "CqrBj",
+  "actions": [
+    {
+      "member": "0",
+      "varName": "",
+      "storage": "3",
+      "varName2": "userimgg",
+      "name": "Create Image from Avatar"
+    },
+    {
+      "storage": "3",
+      "varName": "userimgg",
+      "width": "256",
+      "height": "256",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "3",
+      "varName": "userimgg",
+      "effect": "6",
+      "name": "Apply Image Effect"
+    },
+    {
+      "url": "https://t3.rbxcdn.com/8365f804aee1db4cd2aa70148bcefa2b",
+      "storage": "3",
+      "varName": "ooos",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "ooos",
+      "width": "5000",
+      "height": "5000",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "3",
+      "varName": "userimgg",
+      "storage2": "3",
+      "varName2": "ooos",
+      "x": "1",
+      "y": "1",
+      "mask": "0",
+      "name": "Draw Image on Image"
+    },
+    {
+      "storage": "3",
+      "varName": "userimgg",
+      "channel": "0",
+      "varName2": "",
+      "message": "",
+      "name": "Send Image"
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "name": "play",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "pHvtR",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "5",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You need to enter a song name or YouTube link!",
+      "storage": "1",
+      "varName2": "nolink",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "nolink",
+      "name": "Delete Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "iftrue": "3",
+      "iftrueVal": "1",
+      "iffalse": "0",
+      "iffalseVal": "1",
+      "name": "Check is Bot in Voice Channel"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "songyt",
+      "name": "Store Command Params"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=${tempVars(\"songyt\")}&type=video&key=YOUR_TOKEN",
+      "path": "items[0].snippet.title",
+      "storage": "1",
+      "varName": "sr-y-1",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=${tempVars(\"songyt\")}&type=video&key=YOUR_TOKEN",
+      "path": "items[0].id.videoId",
+      "storage": "1",
+      "varName": "sid-y-1",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=${tempVars(\"songyt\")}&type=video&key=YOUR_TOKEN",
+      "path": "items[0].snippet.thumbnails.high.url",
+      "storage": "1",
+      "varName": "stn-y-1",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/videos?id=${tempVars(\"sid-y-1\")}&part=contentDetails&key=YOUR_TOKEN",
+      "path": "items[0].contentDetails.duration",
+      "storage": "1",
+      "varName": "sd-y-1",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "ytTime": "${tempVars(\"sd-y-1\")}",
+      "storage": "1",
+      "varName": "sd-c-y-1",
+      "name": "YouTube Time Converter"
+    },
+    {
+      "url": "${tempVars(\"sid-y-1\")}",
+      "seek": "0",
+      "volume": "60",
+      "passes": "1",
+      "bitrate": "192",
+      "type": "0",
+      "name": "Play YouTube Video"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "playing",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "34",
+      "iffalse": "0",
+      "iffalseVal": "1",
+      "name": "Check Server Data"
+    },
+    {
+      "title": "🎵 Now Playing 🎵",
+      "author": "",
+      "color": "#5cd9ed",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"stn-y-1\")}",
+      "storage": "1",
+      "varName": "playembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "message": "${tempVars(\"sr-y-1\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "fieldName": "Link",
+      "message": "https://youtube.com/watch?v=${tempVars(\"sid-y-1\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "playing",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "playing-count",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "storage": "2",
+      "varName": "queue",
+      "name": "Create List"
+    },
+    {
+      "storage": "2",
+      "varName": "queue-id",
+      "name": "Create List"
+    },
+    {
+      "storage": "2",
+      "varName": "queue-id",
+      "addType": "0",
+      "position": "",
+      "value": "tempVars(\"sid-y-1\")",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "queue",
+      "addType": "0",
+      "position": "",
+      "value": "tempVars(\"sr-y-1\")",
+      "name": "Add Item to List"
+    },
+    {
+      "title": "Now Playing",
+      "author": "",
+      "color": "#5cd9ed",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"stn-y-2\")}",
+      "storage": "1",
+      "varName": "playembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "message": "${tempVars(\"sr-y-2\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "fieldName": "Link",
+      "message": "https://youtube.com/watch?v=${tempVars(\"sid-y-2\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "playing-count",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "source": "com-7",
+      "type": "true",
+      "name": "Call Command/Event"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "2",
+      "varName": "queue-id",
+      "addType": "0",
+      "position": "",
+      "value": "tempVars(\"sid-y-1\")",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "2",
+      "varName": "queue",
+      "addType": "0",
+      "position": "",
+      "value": "tempVars(\"sr-y-1\")",
+      "name": "Add Item to List"
+    },
+    {
+      "title": "Added to Queue",
+      "author": "",
+      "color": "#5cd9ed",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"stn-y-1\")}",
+      "storage": "1",
+      "varName": "playembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "message": "${tempVars(\"sr-y-1\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "fieldName": "Link",
+      "message": "https://youtube.com/watch?v=${tempVars(\"sid-y-1\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "playing-count",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "playing-count",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "source": "com-7",
+      "type": "true",
+      "name": "Call Command/Event"
+    }
+  ],
+  "comType": "0",
+  "_aliases": []
+}

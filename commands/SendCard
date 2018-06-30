@@ -1,0 +1,192 @@
+{
+  "name": "Sendcard",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "leLjH",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "player",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "player",
+      "comparison": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "22",
+      "name": "Check Variable Type"
+    },
+    {
+      "condition": "0",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "22",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "CheckID",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "CheckID2",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "CheckID",
+      "comparison": "1",
+      "value": "tempVars(\"CheckID2\")",
+      "iftrue": "2",
+      "iftrueVal": "24",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "CmdAuthUser",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "TargetUser",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "TargetUser1",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Store Command Params"
+    },
+    {
+      "url": "https://i.imgur.com/fBg5dTn.jpg",
+      "storage": "1",
+      "varName": "img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "x": "95",
+      "y": "40",
+      "font": "fonts/Asimov.fnt",
+      "width": "",
+      "text": "${tempVars(\"TargetUser\")} ,",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "x": "18",
+      "y": "113",
+      "font": "fonts/Asimov.fnt",
+      "width": "",
+      "text": "${tempVars(\"msg\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "x": "82",
+      "y": "578",
+      "font": "fonts/Asimov.fnt",
+      "width": "",
+      "text": "${tempVars(\"TargetUser\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "x": "654",
+      "y": "683",
+      "font": "fonts/Asimov.fnt",
+      "width": "",
+      "text": "${tempVars(\"CmdAuthUser\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "2",
+      "varName2": "",
+      "message": "",
+      "name": "Send Image"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":white_check_mark: Valentines card sent!",
+      "storage": "1",
+      "varName2": "msh13",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "msh13",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Please follow the following format to send a valentines card!\n\n.sendcard [@player] [msg]",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":x: Please don't try to send yourself a valentines card!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "playnextsong",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "yrfNF",
+  "actions": [
+    {
+      "list": "8",
+      "varName": "queue-id",
+      "getType": "3",
+      "position": "2",
+      "storage": "1",
+      "varName2": "first",
+      "name": "Get Item from List"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"first\")}-skipped",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "5",
+      "name": "Check Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"first\")}-skipped",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "2",
+      "varName": "queue",
+      "removeType": "1",
+      "position": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Remove Item from List"
+    },
+    {
+      "storage": "2",
+      "varName": "queue-id",
+      "removeType": "1",
+      "position": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Remove Item from List"
+    },
+    {
+      "source": "com-7",
+      "type": "true",
+      "name": "Call Command/Event"
+    }
+  ]
+}

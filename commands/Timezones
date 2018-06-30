@@ -1,0 +1,147 @@
+{
+  "name": "Timezones",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "JgOYF",
+  "actions": [
+    {
+      "title": "Timezones",
+      "author": "",
+      "color": "green",
+      "timestamp": "true",
+      "url": "https://www.timeanddate.com/worldclock/converter.html",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "new Date().toLocaleString(\"en-US\", {timeZone: \"Europe/London\"})",
+      "storage": "1",
+      "varName": "gmt",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "new Date().toLocaleString(\"en-US\", {timeZone: \"America/New_York\"})",
+      "storage": "1",
+      "varName": "est",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "new Date().toLocaleString(\"en-US\", {timeZone: \"America/Mexico_City\"})",
+      "storage": "1",
+      "varName": "cst",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "new Date().toLocaleString(\"en-US\", {timeZone: \"America/Los_Angeles\"})",
+      "storage": "1",
+      "varName": "pst",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "new Date().toLocaleString(\"en-US\", {timeZone: \"America/Phoenix\"})",
+      "storage": "1",
+      "varName": "mst",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "new Date().toLocaleString(\"en-US\", {timeZone: \"Australia/Sydney\"})",
+      "storage": "1",
+      "varName": "aest",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "new Date().toLocaleString(\"en-US\", {timeZone: \"Australia/Perth\"})",
+      "storage": "1",
+      "varName": "awst",
+      "name": "Run Script"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "GMT",
+      "message": "${tempVars(\"gmt\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Eastern",
+      "message": "${tempVars(\"est\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Central",
+      "message": "${tempVars(\"cst\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Pacific",
+      "message": "${tempVars(\"pst\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Mountain",
+      "message": "${tempVars(\"mst\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Australian East",
+      "message": "${tempVars(\"aest\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Australia West",
+      "message": "${tempVars(\"awst\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Request your timezone: FORM_URL",
+      "footerIcon": "https://emoji.fileformat.info/gemoji/bangbang.png",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}

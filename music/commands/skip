@@ -1,0 +1,61 @@
+{
+  "name": "skip",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "list": "8",
+      "varName": "queue-id",
+      "getType": "0",
+      "position": "",
+      "storage": "1",
+      "varName2": "skipped",
+      "name": "Get Item from List"
+    },
+    {
+      "list": "8",
+      "varName": "queue-id",
+      "getType": "0",
+      "position": "2",
+      "storage": "1",
+      "varName2": "first",
+      "name": "Get Item from List"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"skipped\")}-skipped",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "storage": "2",
+      "varName": "queue",
+      "removeType": "1",
+      "position": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Remove Item from List"
+    },
+    {
+      "storage": "2",
+      "varName": "queue-id",
+      "removeType": "1",
+      "position": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Remove Item from List"
+    },
+    {
+      "amount": "1",
+      "name": "Skip Queue"
+    }
+  ],
+  "_id": "dzQMH"
+}

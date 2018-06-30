@@ -1,0 +1,36 @@
+{
+  "name": "fidget-spinner",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "UyRUg",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": ":spider_web: You spun your fidget spinner, Lets see how long it will spin for...",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "randumnumbers",
+      "min": "12",
+      "max": "65",
+      "name": "Generate Random Number"
+    },
+    {
+      "time": "${tempVars(\"randumnumbers\")}",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Your fidget spinner spun for **${tempVars(\"randumnumbers\")}** seconds, Some pretty good bearings there ${member} ",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}

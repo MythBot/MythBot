@@ -1,0 +1,51 @@
+{
+  "name": "queue",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "list": "8",
+      "varName": "queue",
+      "start": "",
+      "middle": "",
+      "end": "\\n",
+      "storage": "1",
+      "varName2": "currentqueue",
+      "name": "Convert List to Text"
+    },
+    {
+      "title": "",
+      "author": "Music Queue",
+      "color": "#5cd9ed",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "queueembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "queueembed",
+      "fieldName": "🎵 Music Queue 🎵",
+      "message": "${tempVars(\"currentqueue\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "queueembed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_id": "bBQeW"
+}

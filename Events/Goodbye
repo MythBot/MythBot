@@ -1,0 +1,110 @@
+{
+  "name": "Goodbye",
+  "temp": "member",
+  "event-type": "7",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "goodbye",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "2",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "0",
+      "storage": "1",
+      "varName2": "object",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "5",
+      "storage": "1",
+      "varName2": "disc",
+      "name": "Store Member Things"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "servername",
+      "name": "Store Server Info"
+    },
+    {
+      "info": "1",
+      "find": "goodbye",
+      "storage": "1",
+      "varName": "byechannel",
+      "name": "Find Channel"
+    },
+    {
+      "title": "✨ GoodBye ✨",
+      "author": "",
+      "color": "#ff0006",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "message": "1",
+      "varName": "embed",
+      "info": "5",
+      "storage": "2",
+      "varName2": "time",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"member\")} has left the server",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "© Copyrights 2018-2019 augesrob#7267",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "byechannel",
+      "name": "Send Embed Message"
+    }
+  ],
+  "restriction": "0",
+  "_id": "vGgNw",
+  "permissions": "NONE"
+}

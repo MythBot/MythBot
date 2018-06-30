@@ -1,0 +1,81 @@
+{
+  "name": "Quotes",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "hokTR",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "bot",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "2",
+      "varName": "bot",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatarbot",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "bot",
+      "info": "2",
+      "storage": "1",
+      "varName2": "botname",
+      "name": "Store Member Info"
+    },
+    {
+      "behavior": "0",
+      "url": "https://demo6833419.mockable.io/APIquotes",
+      "path": "NumberOfQuotes",
+      "storage": "1",
+      "varName": "NumberOfQuotes",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "storage": "1",
+      "varName": "ChosenQuote",
+      "min": "1",
+      "max": "${tempVars(\"NumberOfQuotes\")}",
+      "name": "Generate Random Number"
+    },
+    {
+      "behavior": "0",
+      "url": "https://demo6833419.mockable.io/APIquotes",
+      "path": "url${tempVars(\"ChosenQuote\")}",
+      "storage": "1",
+      "varName": "QuoteURL",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "title": "Quote",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "${tempVars(\"QuoteURL\")}",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "Quote",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Quote",
+      "message": "Copyright © 2018 ${tempVars(\"botname\")} - All Rights Reserved.",
+      "footerIcon": "${tempVars(\"avatarbot\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "Quote",
+      "channel": "0",
+      "varName2": "channel",
+      "name": "Send Embed Message"
+    }
+  ]
+}

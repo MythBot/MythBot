@@ -1,0 +1,702 @@
+{
+  "name": "BankHeist",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "amNmd",
+  "actions": [
+    {
+      "comment": "Bank Heist, Orginal Idea by a discord command. I took it to implement it into a DBM kinda format with a twist with my idea's.",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "comment": "Check to see if User is mentioning 1 other person.",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "comment": "Store Stuff for user and mentioned user.",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "MentionedUsername",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "CommandUser",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "CommandAvatarURL",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "MentionAvatarURL",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "bankname",
+      "name": "Store Server Info"
+    },
+    {
+      "comment": "Bank Heist Part. There is 3 parts, which have 3 random choices for each part. The bot will randomly choose them.",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} and ${mentionedUser} are about to raid the local bank!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "They make there way into the bank...",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "part1",
+      "min": "1",
+      "max": "3",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "part1",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "24",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"CommandUser\")} manages to steal some money from the wallet on a desk in the bank.\n**+50**\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"MentionedUsername\")} searched the front desk and found some stuff they can sell.\n**+50**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "50",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "50",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "part1",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "40",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "part1",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "32",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"CommandUser\")} broke one of the bank's safe and there tool for opening them. **-120**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"MentionedUsername\")} Dropped a bag of money they were carrying. **-120**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-120",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-120",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "part1",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "40",
+      "iffalse": "1",
+      "iffalseVal": "40",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "part1",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"CommandUser\")} stole the managers mini safe with money inside. **+140**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"MentionedUsername\")} erased the bank's security system preventing recordings. **+140**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-120",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-120",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "part1",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "2",
+      "iftrueVal": "40",
+      "iffalse": "1",
+      "iffalseVal": "40",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "part2",
+      "min": "1",
+      "max": "2",
+      "name": "Generate Random Number"
+    },
+    {
+      "time": "10",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "part2",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "50",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"CommandUser\")} broke the escape van. **-160**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"MentionedUsername\")} left fingerprints on the scene. **-170**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-170",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-160",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "part2",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "58",
+      "iffalse": "1",
+      "iffalseVal": "58",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "part2",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"CommandUser\")} somehow enabled the security backup system too. **-180**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"MentionedUsername\")} Accidently showed there face to a worker. **-190**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-190",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-180",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "part2",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "58",
+      "iffalse": "1",
+      "iffalseVal": "58",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Exiting the Bank Part.",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "part3",
+      "min": "1",
+      "max": "2",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "part3",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "68",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"CommandUser\")} Forgot the money bag. **-200**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"MentionedUsername\")} Couldn't find the keys to the van. **-240**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-200",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-180",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "part3",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "77",
+      "iffalse": "1",
+      "iffalseVal": "77",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "part3",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"CommandUser\")} got all the money bags in the van and is ready to go! **+100**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"MentionedUsername\")} Opened the bank vault and got all the money out to the escape van. **+300**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "300",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "100",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "part3",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "2",
+      "iftrueVal": "77",
+      "iffalse": "1",
+      "iffalseVal": "77",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "moneyvault",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "comment": "Randomize money payout's.",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "part3",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "83",
+      "name": "Check Variable"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "5000",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "5000",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "The bank heist was a success. You both made off with $5000.\n\n**Cooldown of 1 hour per use of command**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "part3",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "88",
+      "name": "Check Variable"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "1500",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "1500",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "The bank heist was a success. You both made off with $1500.\n\n**Cooldown of 1 hour per use of command**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "part3",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "91",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "The bank heist was a semi-failure. You both didn't get any money other then the rewards you earned.\nThe reason is well, the bank caught both of you on security camera's.\n\n**Cooldown of 1 hour per use of command**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "part3",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "68",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "The bank heist was a semi-failure. You both didn't get any money other then the rewards you earned.\nThe reason is well, the bank managed to get fingerprints of both of you.\n\n**Cooldown of 1 hour per use of command**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "_timeRestriction": 3600
+}

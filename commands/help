@@ -1,0 +1,78 @@
+{
+  "name": "Help",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "```css\n**Default Commands:**\nHelp                      Lists available commands\nRules                     List Discord Server Rules\nStaff                     Current Staff\nWebsite                   Brings you to current website.\nMCPE [IP:PORT]           Server Status\nUpdates                   Last Bot Update\nGoogle                    Let me google that for you!!\nTranslate [Lang] [MSG]    Multiple Languages.\nInvite                    Invite link to chat\nSetAlarm                  Set alarm and msg you when time passes\nPoll [Question]           Longer than 3 words.\nSay                       Speak As Bot\nEmote                     Text To Text\nJail [@user]              Bars over any user\nSendcard [@user] [MSG]    Sending a valentines card to one's self\nTimezones                 Shows general timezones\nCalculate [operation]     Does Math For You\ncnjoke                    Chuck Noris Joke\ncat                       Random Cat Image\nLevel                     Displays the user's level\nbothelp [type] [msg]      Want a feature or help with something?\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "```css\n**Games/Fun:**\nCointoss                  Coin flipping command.\nRevise                    Scramble Words.\nDadJokes                  Randon Dad Jokes.\nBankHeist [@user]         Break into a bank for rewards or losses.\nSlots [Requires $]        Simply do slots command to play.\n8ball [Question]          Ask a question\nRPS                       Rock Paper Sissors\nSecond                    Countdown\nSnowBall [@user]          Toss SnowBalls\nRaid                      Shows Help Menu\nBase                      Shows Help Menu\nQuotes                    Random quote\nStats                     Shows Discord Stats\nBank Balance              Shows Your Money\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "```css\n**Music:** \nPlay [song]                Plays a song from youtube\nJoin                       Bot join voice channel\nLeave                      Bot leaves voice channel\nSkip                       Skip to next song in queue\nAudio [number]             Change voulme level\nPause                      Pauses music\nResume                     Resumes music\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "```css\n**Staff Commands:**\nKick [@user] [reason]     Kicks the mentioned user\nBan [@user] [reason]      Bans the mentioned user\nMute [@user]              Mutes the mentioned user\nUnmute [@user]            Unmutes the mentioned user\nDeleteChannel [#channel]  Deletes the mentioned channel\nDeleteRole [#channel]     Deletes the mentioned role\nPurge [# of Lines]        Deletes the chat in bulk\nNick [@user] [Nickname]   Nickname [@username] [newnickname]\nPoke [@user] [MSG]        Poke [@username]\nDelmsg [@user]            Deletes all msgs in channel for user\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "```css\n**Coding/Dev:**\nReportBug                 Report Issues To Github\ngetid                     Get Discord userid\nHastebin [message]        message to Hastebin and then return the post link!\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "```css\n**Roles**\n+ranks                      Shows a list of possible ranks to add\n\n(Everything listed is based on the current server roles)\n*If it doesnt exisit for the server then nothing will happen\n**Or you already have the role\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "```css\n**Misc**\nlist                          Shows a To Do List\nlistadd                       Add To Do List\nlistdone                      Removes From To Do List\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "```css\n**Bonus Features**\nChatLogger                  Requries Chat-History Channel\nPoll                       Requires a Poll Channel\nwelcomer                   Requires Welcome Channel [Toggles(on/off)]\nleaver                     Requires GoodBye Channel [Toggles(on/off)]\nbothelp                    Requires Botreports Channel\n```\n```css\nEarn money by simply talking normally.\nUse Money by our games.\nToggle Welcome and Leaving Messages\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    }
+  ],
+  "_id": "UvccQ",
+  "comType": "0"
+}

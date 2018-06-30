@@ -1,0 +1,32 @@
+{
+  "name": "volume",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "GEJHA",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "volume",
+      "name": "Store Command Params"
+    },
+    {
+      "volume": "${tempVars(\"volume\")}",
+      "name": "Set Audio Volume"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Voulme is set to ${tempVars(\"volume\")} 👂",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}

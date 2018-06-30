@@ -1,0 +1,35 @@
+{
+  "name": "cat",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Looking for Cat Photos...",
+      "storage": "1",
+      "varName2": "msg",
+      "name": "Send Message"
+    },
+    {
+      "url": "https://thecatapi.com/api/images/get",
+      "storage": "1",
+      "varName": "img",
+      "name": "Create Image"
+    },
+    {
+      "storage": "1",
+      "varName": "img",
+      "channel": "0",
+      "varName2": "",
+      "message": "",
+      "name": "Send Image"
+    },
+    {
+      "storage": "1",
+      "varName": "msg",
+      "name": "Delete Message"
+    }
+  ],
+  "_id": "slyKd"
+}

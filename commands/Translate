@@ -1,0 +1,44 @@
+{
+  "name": "Translate",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "zOSPs",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "lang",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "incomingMessage",
+      "name": "Store Command Params"
+    },
+    {
+      "behavior": "1",
+      "interpretation": "0",
+      "code": "this.CheckAndInstallNodeModule = function(moduleName){\n\n\ttry {\n\t\trequire.resolve(moduleName)\n\t} catch(e) {\n\n\t\ttry {\n\t\t\tconsole.log(\"Installing Node Module: \" + moduleName);\t\n\t\t\tvar child = require('child_process');\n\t\t\tvar cliCommand = 'npm install ' + moduleName + \" --save --loglevel=error\";\n\t\t\tvar result = child.execSync(cliCommand,{stdio:[0,1,2]});\n\t\t\t\n\t\t} catch (error) {\n\t\t\tconsole.error(\"Could not automatically install \" + moduleName + \" Please install it manually 'npm install \" + moduleName + \"' before continuing.\");c\n\t\t}\n\t}\t  \t\n}\n\nthis.CheckAndInstallNodeModule('google-translate-api');\n\nconst translate = require('google-translate-api');\n \ntranslate(tempVars(\"incomingMessage\"), {to: tempVars(\"lang\")}).then(res => {\n    console.log(res.text);\n    this.storeValue(res.text, 1, \"outgoingMessage\", cache);\n    this.callNextAction(cache); \n}).catch(err => {\n    console.error(err);\n    this.storeValue(err, 1, \"outgoingMessage\", cache);\n    this.callNextAction(cache); \n});\n",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```css\n${tempVars(\"outgoingMessage\")}\n```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    }
+  ],
+  "comType": "0"
+}

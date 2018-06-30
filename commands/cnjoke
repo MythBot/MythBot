@@ -1,0 +1,24 @@
+{
+  "name": "cnjoke",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "PZyNn",
+  "actions": [
+    {
+      "behavior": "0",
+      "url": "http://api.icndb.com/jokes/random?firstName=&lastName=${user.username}",
+      "path": "value.joke",
+      "storage": "1",
+      "varName": "joke",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"joke\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}

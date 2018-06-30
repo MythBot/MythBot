@@ -1,0 +1,40 @@
+{
+  "name": "Invite",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "bWhPA",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} Creating an invite...",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "maxUses": "",
+      "lifetime": "",
+      "tempInvite": "false",
+      "unique": "true",
+      "storage": "1",
+      "varName2": "invite",
+      "name": "Create Invite"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${tempVars(\"invite\")}",
+      "storage": "1",
+      "varName2": "invite",
+      "name": "Send Message"
+    }
+  ]
+}

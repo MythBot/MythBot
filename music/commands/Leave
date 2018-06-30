@@ -1,0 +1,16 @@
+{
+  "name": "Leave",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "Wlwqw",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "Leave Voice Channel"
+    }
+  ]
+}

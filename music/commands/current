@@ -1,0 +1,85 @@
+{
+  "name": "current",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "AkOcM",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "list": "8",
+      "varName": "queue",
+      "getType": "0",
+      "position": "",
+      "storage": "1",
+      "varName2": "sr-y-1",
+      "name": "Get Item from List"
+    },
+    {
+      "list": "8",
+      "varName": "queue-id",
+      "getType": "0",
+      "position": "",
+      "storage": "1",
+      "varName2": "sid-y-1",
+      "name": "Get Item from List"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&q=${tempVars(\"sid-y-1\")}&type=video&key=YOUR_TOKEN",
+      "path": "items[0].snippet.thumbnails.high.url",
+      "storage": "1",
+      "varName": "stn-y-1",
+      "debugMode": "0",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "title": "🎵 Currently Playing 🎵",
+      "author": "",
+      "color": "#5cd9ed",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"stn-y-1\")}",
+      "storage": "1",
+      "varName": "playembed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "message": "${tempVars(\"sr-y-1\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "fieldName": "Link",
+      "message": "https://youtube.com/watch?v=${tempVars(\"sid-y-1\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "playembed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_aliases": [
+    "playing",
+    "now",
+    "nowplaying",
+    "current",
+    "currentsong",
+    "song"
+  ]
+}

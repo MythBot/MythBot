@@ -1,0 +1,32 @@
+{
+  "name": "ServerMode",
+  "permissions": "NONE",
+  "restriction": "4",
+  "_id": "UDCRK",
+  "actions": [
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "client.users.size",
+      "storage": "1",
+      "varName": "users",
+      "name": "Run Script"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "client.guilds.size",
+      "storage": "1",
+      "varName": "guilds",
+      "name": "Run Script"
+    },
+    {
+      "activity": "2",
+      "nameText": "Help: *help - ${tempVars(\"guilds\")} servers and ${tempVars(\"users\")} users!",
+      "url": "",
+      "name": "Set Bot Activity"
+    }
+  ],
+  "comType": "0",
+  "event-type": "1"
+}

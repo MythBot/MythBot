@@ -1,0 +1,36 @@
+{
+  "name": "playingqueue",
+  "temp": "5",
+  "event-type": "3",
+  "_id": "lTBMf",
+  "actions": [
+    {
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check is Bot in Voice Channel"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "playing",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "playing-count",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "gameName": "with absolutely nothing...",
+      "gameLink": "",
+      "name": "Set Bot Game"
+    }
+  ]
+}

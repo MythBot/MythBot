@@ -1,0 +1,22 @@
+{
+  "name": "Add Role Pending Rule Check",
+  "temp": "mem",
+  "event-type": "6",
+  "_id": "EDJte",
+  "actions": [
+    {
+      "info": "1",
+      "find": "Pending Rule Check",
+      "storage": "1",
+      "varName": "memrole",
+      "name": "Find Role"
+    },
+    {
+      "member": "2",
+      "varName2": "mem",
+      "role": "3",
+      "varName": "memrole",
+      "name": "Add Member Role"
+    }
+  ]
+}

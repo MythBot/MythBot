@@ -1,0 +1,248 @@
+{
+  "name": "SetAlarm",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "numtest",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "unit",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "3",
+      "storage": "1",
+      "varName": "name",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "num",
+      "changeType": "0",
+      "value": "parseInt(tempVars(\"numtest\"))",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "num",
+      "comparison": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "31",
+      "name": "Check Variable Type"
+    },
+    {
+      "storage": "1",
+      "varName": "num",
+      "comparison": "3",
+      "value": "0",
+      "iftrue": "2",
+      "iftrueVal": "29",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "unit",
+      "comparison": "1",
+      "value": "seconds",
+      "iftrue": "2",
+      "iftrueVal": "17",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "unit",
+      "comparison": "1",
+      "value": "second",
+      "iftrue": "2",
+      "iftrueVal": "17",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "unit",
+      "comparison": "1",
+      "value": "sec",
+      "iftrue": "2",
+      "iftrueVal": "17",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "unit",
+      "comparison": "1",
+      "value": "minutes",
+      "iftrue": "2",
+      "iftrueVal": "21",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "unit",
+      "comparison": "1",
+      "value": "minute",
+      "iftrue": "2",
+      "iftrueVal": "21",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "unit",
+      "comparison": "1",
+      "value": "min",
+      "iftrue": "2",
+      "iftrueVal": "21",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "unit",
+      "comparison": "1",
+      "value": "hours",
+      "iftrue": "2",
+      "iftrueVal": "25",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "unit",
+      "comparison": "1",
+      "value": "hour",
+      "iftrue": "2",
+      "iftrueVal": "25",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Error:** Invalid unit of time. Try `seconds`, `min`, `hours`, etc.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Alarm set for ${tempVars(\"num\")} ${tempVars(\"unit\")}. I will PM you when your time is done.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "${tempVars(\"num\")}",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": ":alarm_clock: **|** ${tempVars(\"name\")}! **|** :alarm_clock:",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Alarm set for ${tempVars(\"num\")} ${tempVars(\"unit\")}. I will PM you when your time is done.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "${tempVars(\"num\")}",
+      "measurement": "2",
+      "name": "Wait"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": ":alarm_clock: **|** ${tempVars(\"name\")}! **|** :alarm_clock:",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Alarm set for ${tempVars(\"num\")} ${tempVars(\"unit\")}. I will PM you when your time is done.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "${tempVars(\"num\")}",
+      "measurement": "3",
+      "name": "Wait"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": ":alarm_clock: **|** ${tempVars(\"name\")}! **|** :alarm_clock:",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Error:** Alarm can't be sent for negative time.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Error:** Alarm time can't be text.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "wIzgy",
+  "comType": "0"
+}

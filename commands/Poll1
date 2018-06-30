@@ -1,0 +1,102 @@
+{
+  "name": "Poll",
+  "permissions": "MANAGE_MESSAGES",
+  "restriction": "1",
+  "_id": "uEjkH",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "message",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "user",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "useravatar",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "find": "poll",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "emoji": "4",
+      "varName2": "👍",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "emoji": "4",
+      "varName2": "👎",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "title": "✨ Poll ✨",
+      "author": "",
+      "color": "#ff0006",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"icon\")}",
+      "storage": "1",
+      "varName": "embmsg",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "fieldName": "Message:",
+      "message": "${tempVars(\"message\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "fieldName": "Posted By",
+      "message": "${tempVars(\"user\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "message": "© Copyrights 2018-2019",
+      "footerIcon": "${tempVars(\"icon\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embmsg",
+      "channel": "5",
+      "varName2": "channel",
+      "name": "Send Embed Message"
+    },
+    {
+      "source": "goUZm",
+      "type": "false",
+      "name": "Call Command/Event"
+    }
+  ]
+}

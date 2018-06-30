@@ -1,0 +1,35 @@
+{
+  "name": "Rule Check role",
+  "temp": "mem",
+  "event-type": "1",
+  "_id": "veUmP",
+  "actions": [
+    {
+      "info": "1",
+      "find": "Pending Rule Check",
+      "storage": "1",
+      "varName": "rolerulecheck",
+      "name": "Find Role"
+    },
+    {
+      "storage": "1",
+      "varName": "rolerulecheck",
+      "comparison": "7",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable Type"
+    },
+    {
+      "roleName": "Pending Rule Check",
+      "hoist": "false",
+      "mentionable": "false",
+      "color": "",
+      "position": "",
+      "storage": "1",
+      "varName": "rulerole",
+      "name": "Create Role"
+    }
+  ]
+}

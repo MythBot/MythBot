@@ -1,0 +1,33 @@
+{
+  "name": "Channel Access",
+  "temp": "mem",
+  "event-type": "1",
+  "_id": "EDJte",
+  "actions": [
+    {
+      "info": "1",
+      "find": "gain-access",
+      "storage": "1",
+      "varName": "gain-access",
+      "name": "Find Channel"
+    },
+    {
+      "storage": "1",
+      "varName": "gain-access",
+      "comparison": "5",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "5",
+      "name": "Check Variable Type"
+    },
+    {
+      "channelName": "gain-access",
+      "topic": "",
+      "position": "",
+      "storage": "0",
+      "varName": "",
+      "name": "Create Text Channel"
+    }
+  ]
+}

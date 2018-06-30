@@ -1,0 +1,49 @@
+{
+  "name": "Cointoss",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "number",
+      "min": "1",
+      "max": "2",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "number",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "5",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Heads!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Tails!",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "hVaws",
+  "_aliases": [
+    "tosscoin"
+  ],
+  "comType": "0"
+}

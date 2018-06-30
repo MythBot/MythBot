@@ -1,0 +1,28 @@
+{
+  "name": "Say",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "2",
+      "varName": "say",
+      "name": "Store Command Params"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${serverVars(\"say\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    }
+  ],
+  "_id": "uvVLN"
+}

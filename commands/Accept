@@ -1,0 +1,36 @@
+{
+  "name": "accept",
+  "permissions": "NONE",
+  "restriction": "1",
+  "actions": [
+    {
+      "info": "1",
+      "find": "Pending Rule Check",
+      "storage": "1",
+      "varName": "Pending Rule Check",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName2": "",
+      "role": "3",
+      "varName": "Pending Rule Check",
+      "name": "Remove Member Role"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "___***Thank you for accepting our rules.***___\nHave a good rest of your day and enjoy your stay!\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_id": "EGKQQ",
+  "comType": "0"
+}

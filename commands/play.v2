@@ -1,0 +1,151 @@
+{
+  "name": "plays",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "Ynexl",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "search",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "userimage",
+      "name": "Store Member Info"
+    },
+    {
+      "condition": "0",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "```Please write something to search on YouTube!```",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[0].snippet.channelTitle",
+      "storage": "1",
+      "varName": "channel",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[0].snippet.title",
+      "storage": "1",
+      "varName": "title",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "token": "",
+      "user": "",
+      "pass": "",
+      "url": "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${tempVars(\"search\")}&key=AIzaSyBe-xX0EqAILDJc2ZNIkGkp1tgu-onEiZg",
+      "path": "items[0].id.videoId",
+      "storage": "1",
+      "varName": "url",
+      "debugMode": "1",
+      "headers": "",
+      "name": "Store Json From WebAPI"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "playchannel",
+      "name": "Store Voice Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    },
+    {
+      "url": "${tempVars(\"url\")}",
+      "seek": "0",
+      "volume": "",
+      "passes": "1",
+      "bitrate": "",
+      "type": "0",
+      "name": "Play YouTube Video"
+    },
+    {
+      "title": "🎵 Now Playing 🎵",
+      "author": "",
+      "color": "197f00",
+      "timestamp": "true",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://img.youtube.com/vi/${tempVars(\"url\")}/default.jpg",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"title\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Link",
+      "message": "https://www.youtube.com/watch?v=${tempVars(\"url\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Song Requested By ${tempVars(\"username\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}

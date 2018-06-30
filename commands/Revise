@@ -1,0 +1,24 @@
+{
+  "name": "Revise",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "LWQBo",
+  "actions": [
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "words",
+      "name": "Store Command Params"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "let array = tempVars(\"words\").split(\" \");\n\nfor (let i = array.length - 1; i > 0; i--) {\n    let j = Math.floor(Math.random() * (i + 1));\n    [array[i], array[j]] = [array[j], array[i]];\n}\n\nvar out = array.join(\" \").trim();\n\nmsg.channel.send(out.substr(0, 1).toUpperCase() + out.substr(1) + \".\")\n\n",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    }
+  ],
+  "comType": "0"
+}

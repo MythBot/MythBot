@@ -1,0 +1,910 @@
+{
+  "name": "Base",
+  "permissions": "NONE",
+  "restriction": "0",
+  "_id": "APzLs",
+  "actions": [
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "6",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Hello!**\n\nI see you have used the base command, but you did not specify the correct param.\nHere is what you can do\n\n**Help**\nbase setup - Setup a base on the server.\nbase buyprinter - Buy a Money Printer to use in your base to make money.\nbase buysecurity - Buy a security team to be used once in a raid.\nraid - Raid a user's base, do raid @usermention to use. Cooldown 2 hours.\n\nbase transfer - Transfer the money printers current overall balance to your bank account. **Won't work if mayor has lockdown in effect**\nbase info - Do base info @usermention, Show's all status about the user's base. **Hopefully you won't try and use that to pick the good bases to raid hah**\nor just do base info without a usermention to get your own status\n\nbase printstart - Start's Printers, Note, You will not get a message but the printers will start, check !base info to see.\nbase buybarricade - Buy a barricade to help protect your base!\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "comment": "Checks to see if user did a param, If not show message. Basically a help menu.",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Storing Param and other member releated stuff.",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "param",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "base",
+      "defaultVal": "false",
+      "storage": "1",
+      "varName2": "base",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "raided",
+      "defaultVal": "false",
+      "storage": "1",
+      "varName2": "raided",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "overallprinterbalance",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "overallprinterbalance",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "printers",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "printers",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "banksystem",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "securityteam",
+      "defaultVal": "false",
+      "storage": "1",
+      "varName2": "securityteam",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "barricaded",
+      "defaultVal": "false",
+      "storage": "1",
+      "varName2": "barricaded",
+      "name": "Store Member Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "mayorlockdown",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "mayorlockdown",
+      "name": "Store Server Data"
+    },
+    {
+      "comment": "End of Storeing lol :D",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "param",
+      "comparison": "1",
+      "value": "\"setup\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "21",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "**Setup a base**\nWe found a old warehouse where you can setup the base there. See the help with !base for command info.\n\n**Tasks**\nBuy a money printer.\nCash out the money printer.\nBuild Defense (one time use per raid)\nRaid Other's\nBuy Security Guard's (one time use per raid)\n\nWe wish you good luck! To see your base status do +base baseinfo\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "base",
+      "changeType": "0",
+      "value": "true",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "param",
+      "comparison": "1",
+      "value": "\"buyprinter\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "33",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Welcome ${tempVars(\"username\")} to the printer dealer. Let me check you're bank account before we contiune...\nI also happen to sell security with !base buysecurity. $4000 though.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "comparison": "4",
+      "value": "2000",
+      "iftrue": "2",
+      "iftrueVal": "29",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "This a joke, some camera prank show or you are just not rich? You don't even have $2000! Get out of here and get some money before trying to get some printers from me!\nWait, here's your wallet *steals wallet from your hands*, Look at dat, some money. I am going to take some of this money for my own.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-270",
+      "name": "Control Member Data"
+    },
+    {
+      "comment": "change the money removal amount and dialog to make it worse if you want xD. Printer Buy command ^",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-2000",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Good... You got enough. Here's the printer. *Sends printer to base*",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "printers",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "param",
+      "comparison": "1",
+      "value": "\"buysecurity\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "46",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "Welcome ${tempVars(\"username\")} to the Security Department. Let me check you're bank account before we contiune...\nI also happen to know a friend who sells prints with !base buyprinter. $2000 though.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "comparison": "4",
+      "value": "4000",
+      "iftrue": "2",
+      "iftrueVal": "41",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "This some dumb joke or what? You don't even have $4000! Get out of here and get some money before trying to hire security!\nLooks like we were able to pull up some bank logs on you ${tempVars(\"username\")} and found out you could owe debt possibly. Well. We may have added some!\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-1000",
+      "name": "Control Member Data"
+    },
+    {
+      "comment": "change the money removal amount and dialog to make it worse if you want xD. Security Buy Command ^",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-2000",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "Good... You got enough. Here's the contract, We will attempt to protect you're base from a raid attack for one time use though.\nThen we have to get out of there before are boss comes back from his coffee break. Though you can re-hire us again to protect you again.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "securityteam",
+      "changeType": "0",
+      "value": "true",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Barricade Command Shop. ",
+      "color": "#00ff40",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "param",
+      "comparison": "1",
+      "value": "\"buybarricade\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "57",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "Welcome ${tempVars(\"username\")} to the Barricade Shop. Let me check you're bank account before we contiune...\nWe can help you barricade your base from theives and raiders.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "comparison": "4",
+      "value": "6800",
+      "iftrue": "2",
+      "iftrueVal": "52",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "It appears the bank has rejected the order. **Error: Not enough money**\nPlease put more money in the bank then come back.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "-6800",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "Great! The order went through and the bank accepted. We will get to work barricadeing your base. This should hold up one time and can be re-bought after each raid.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "barricaded",
+      "changeType": "0",
+      "value": "true",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Info Command, Show's info about a base or your base in general.",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "param",
+      "comparison": "1",
+      "value": "\"info\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "70",
+      "name": "Check Variable"
+    },
+    {
+      "condition": "1",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "67",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "raided",
+      "defaultVal": "no",
+      "storage": "1",
+      "varName2": "raidedmention",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "printers",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "printersmention",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "securityteam",
+      "defaultVal": "no",
+      "storage": "1",
+      "varName2": "securityteammention",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "barricaded",
+      "defaultVal": "no",
+      "storage": "1",
+      "varName2": "barricadedmention",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "mentionuser",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**${tempVars(\"mentionuser\")}'s base**\nWas Raided? ${tempVars(\"raidedmention\")}\nBarricaded? ${tempVars(\"barricadedmention\")}\nHas Security? ${tempVars(\"securityteammention\")}\nNumber Of Printers: ${tempVars(\"printersmention\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "If no mention detects, send's this send message to the user.",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "**Your Base Status**\nWas Raided? ${tempVars(\"raided\")}\nBarricaded? ${tempVars(\"barricaded\")}\nHas Security? ${tempVars(\"securityteam\")}\nNumber Of Printers: ${tempVars(\"printers\")}\nCash Made: ${tempVars(\"overallprinterbalance\")}",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Transfer System.",
+      "color": "#0000ff",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "param",
+      "comparison": "1",
+      "value": "\"transfer\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "84",
+      "name": "Check Variable"
+    },
+    {
+      "time": "4",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "overallprinterbalance",
+      "comparison": "4",
+      "value": "5000",
+      "iftrue": "2",
+      "iftrueVal": "76",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Not Enough to Exchange. $5000 minimum\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Check for mayor lockdown.",
+      "color": "#0000ff",
+      "name": "Comment"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "mayorlockdown",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "80",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Mayor Lockdown In effect. Banks are closed until further notice.**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "If no mayor lockdown and the user has the amount required to transfer, Then run this.",
+      "color": "#24db44",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "overallprinterbalance",
+      "changeType": "1",
+      "value": "-5000",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "1",
+      "value": "5000",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Success!**\nWe have transfered **$5000** to you're bank account!\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "param",
+      "comparison": "1",
+      "value": "\"printstart\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "printers",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "128",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "Want Bigger Payouts or smaller ones? Just change these down below!",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "printers",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "min": "1",
+      "max": "5",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "93",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "overallprinterbalance",
+      "changeType": "1",
+      "value": "{5 * tempVars(\"printers\")}",
+      "name": "Control Member Data"
+    },
+    {
+      "call": "109",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "comparison": "1",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "97",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "overallprinterbalance",
+      "changeType": "1",
+      "value": "{2 * tempVars(\"printers\")}",
+      "name": "Control Member Data"
+    },
+    {
+      "call": "109",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "comparison": "1",
+      "value": "3",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "101",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "overallprinterbalance",
+      "changeType": "1",
+      "value": "{6 * tempVars(\"printers\")}",
+      "name": "Control Member Data"
+    },
+    {
+      "call": "109",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "comparison": "1",
+      "value": "4",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "105",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "overallprinterbalance",
+      "changeType": "1",
+      "value": "{100 * tempVars(\"printers\")}",
+      "name": "Control Member Data"
+    },
+    {
+      "call": "109",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "comparison": "1",
+      "value": "5",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "overallprinterbalance",
+      "changeType": "1",
+      "value": "{200 * tempVars(\"printers\")}",
+      "name": "Control Member Data"
+    },
+    {
+      "call": "109",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "time": "1",
+      "measurement": "3",
+      "name": "Wait"
+    },
+    {
+      "comment": "Want to change the randomized wait time, look below this comment. ",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "randomwait",
+      "min": "1",
+      "max": "4",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "time": "30",
+      "measurement": "2",
+      "name": "Wait"
+    },
+    {
+      "call": "87",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "time": "15",
+      "measurement": "2",
+      "name": "Wait"
+    },
+    {
+      "call": "87",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "time": "5",
+      "measurement": "2",
+      "name": "Wait"
+    },
+    {
+      "call": "87",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "generaterandom",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "time": "1",
+      "measurement": "3",
+      "name": "Wait"
+    },
+    {
+      "call": "87",
+      "name": "Jump to Action"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**You can't start you're money printers if you don't even own one!**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}
