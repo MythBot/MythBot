@@ -1,3 +1,444 @@
+<style>
+  @import url("https://fonts.googleapis.com/css?family=Aclonica");
+  
+#customers {
+ font-family: 'Aclonica';font-size: 22px;
+}
+
+  span.status.green {
+	background-color: transparent !important;
+} 
+
+body {
+    background-image: url("https://goo.gl/Ps8tMX") !important;
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100% !important;
+}
+
+iframe {
+  max-width: 600px !important;
+  min-width: 600px !important;
+  max-height: 150px !important;
+  min-height: 150px !important;
+}
+
+h1 {
+  font-family: 'Aclonica', serif;
+  font-size: 50px;
+}
+
+code {
+  font-weight: bold;
+  color: #c0392b;
+  border-radius: 5px;
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+span {
+  color: #34495e;
+}
+
+span:hover {
+  color: #2c3e50;
+}
+
+#ads {
+  border-radius: 10px !important;
+}
+
+.logotype img {
+    display: none;
+}
+
+.button:hover {background-color: #bd7d17}
+
+.button:active {
+  background-color: #3498db;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#createdby {
+    color: #bd7d17 !important;
+}
+
+#createdby {
+    font-family: 'Roboto'; font-weight: 400;
+}
+
+#createdby b {
+	border-radius:2px !important; background-color:#333 !important;
+}
+
+#createdby img {
+	border-radius:2px !important;
+}
+
+.titleandvote .votebutton:not(.votingvoted) {
+  	animation: pulse 2s linear infinite;
+    background-color: transparent !important;
+}
+  
+.titleandvote .votebutton {
+  	animation: pulse 6s linear infinite;
+    margin-bottom: 10px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+}
+
+@keyframes pulse {
+   0% {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+   }
+   
+   25% {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+   }
+   
+   50% {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+   }
+   75% {
+      -webkit-transform: scale(0.9);
+      -moz-transform: scale(0.9);
+      -o-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+   }
+   100% {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -o-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+   }
+
+  }
+
+#libclick::before {
+	content: "Made with ";
+}
+
+.lib #libclick {
+	color: #bd7d17 !important;
+}
+
+.servers::before {
+	content: "Currently in ";
+    color: #bd7d17; !important;
+    background-color: transparent !important;
+    
+}
+
+.longdescription .content {
+    transition-duration: 0s;
+    border-radius: 15px !important;
+    border-style: solid !important;
+    border-width: 2px !important;
+    border-color: #2980b9 !important;
+    background-color: transparent, !important;
+}
+
+.longdescription .content:hover {
+    transition-duration: 0s;
+    border-radius: 20px !important;
+    border-style: solid !important;
+    border-width: 3.5px !important;
+    border-color: #bd7d17 !important;
+}
+
+.atag:hover {
+    background-color: #65656557!important;
+    color: #3498db !important;
+}
+
+#websitelink{
+    background-color: #65656557!important;
+    color: #3498db !important;
+}
+
+#websitelink:hover {
+    background-color: #65656557!important;
+    color: #bd7d17 !important;
+    font-weight: bold;
+}
+
+#support {
+    background-color: #65656557!important;
+    color: #3498db !important;
+}
+
+#support:hover {
+    background-color: #65656557!important;
+    color: #bd7d17 !important;
+    font-weight: bold;
+}
+
+#github {
+    background-color: #65656557!important;
+    color: #3498db !important;
+}
+
+#github:hover {
+    background-color: #65656557!important;
+    color: #bd7d17 !important;
+    font-weight: bold;
+}
+
+.botpagebutton {
+    background-color: #65656557!important;
+    color: #bd7d17 !important;
+}
+
+.botpagebutton:hover {
+    background-color: #65656557!important;
+    color: #bd7d17 !important;
+    font-weight: bold;
+}
+
+#report {
+    background-color: #65656557!important;
+    color: #3498db !important;
+}
+
+#report:hover {
+    background-color: #65656557!important;
+    color: #ecf0f1 !important;
+    font-weight: bold;
+}
+
+.atag:before {
+    background: #bd7d17;
+}
+
+.atag {
+    background-color: #65656557!important;
+    color: #7f8c8d !important;
+}
+
+.atag:after {
+    border-left-color: #2c3e50;
+}
+
+.atag:hover:after {
+    border-left-color: #34495e;
+}
+
+.atag:hover {
+    text-decoration: underline;
+}
+
+#customers td, #customers th {
+    padding: 8px;
+    text-align: left;
+}
+
+.btn-like {
+    background-color: white;
+    color: #e74c3c;
+}
+
+.btn-like:hover {
+    background-color: white;
+    color: #c0392b;
+}
+
+.blog_card:after {
+    content: "Click to view this server...";
+}
+
+#customers tr:hover {
+    background-color: black;
+    color: white;
+}
+
+#bot-details-page #bot-stats p {
+    color: white;
+}
+
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #DD4B39;
+    color: #bd7d17;
+}
+
+.bot-description {
+	color: #bd7d17;
+}
+
+#bot-details-page .btn-like:before {
+    padding-right: 5px;
+    content: " Upvotes";
+    white-space: pre;
+}
+
+h2 {
+   color: #bd7d17;
+   text-align: center;
+}
+
+.underline {
+   text-decoration: underline;
+}
+
+.points {
+   color: #bd7d17;
+}
+
+.servers.btn.btn-orange.btn-2x {
+   cursor: text !important;
+}
+
+.btn-orange {	
+	background-color: #e600ac;
+    
+}
+
+.btn-orange:hover {	
+	background-color: #c0392b;
+    color: #ecf0f1;
+}
+
+.btn-blue {
+	background-color: #2980b9;
+}
+
+.btn-blue:hover {
+	background-color: #c0392b;
+    color: #ecf0f1;
+}
+
+#site-header {
+    text-align: center !important;
+    background-color: #2c3e50;
+}
+
+.profile {
+    text-align: center;
+    color: white;
+}
+
+.columns .bot-img {
+    border-radius: 4px !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+ .bot-img img {
+    -webkit-animation: mover 1.5s infinite  alternate; 
+    animation: mover 1.5s infinite  alternate;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    border-radius: 50%
+}
+
+.bot-name {
+    -webkit-animation: colorchange 5s infinite alternate;
+    animation: colorchange 5s infinite alternate;
+    font-weight: bold;
+    font-style: Aclonica;
+}
+
+   =balaan@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+	}
+    
+       
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+@-webkit-keyframes colorchange {
+      0% {
+        
+      color: blue;
+     }
+      
+      10% {
+        
+        color: #8e44ad;
+      }
+      
+      20% {
+        
+        color: #1abc9c;
+      }
+      
+      30% {
+        
+        color: #d35400;
+      }
+      
+      40% {
+        
+        color: blue;
+      }
+      
+      50% {
+        
+        color: #34495e;
+      }
+      
+      60% {
+        
+        color: blue;
+      }
+      
+      70% {
+        
+        color: #2980b9;
+      }
+      80% {
+     
+        color: #f1c40f;
+      }
+      
+      90% {
+     
+        color: #2980b9;
+      }
+      
+      100% {
+        
+        color: pink;
+      }
+    }
+</style>
 <center><h1><span style="color: #8e44ad;"><img src="http://i66.tinypic.com/neu5qp.jpg" alt="Banner" width="904" height="149" /></span></h1></center>
 </a><br><br>
 <center><a href="https://discordbots.org/bot/420595373745111050" >
