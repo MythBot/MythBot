@@ -30,3 +30,5 @@ You are allowed to change the code to how you see fit.
 
 
 Right Click on convert_YT_Time_MJ.js and save as to download it.
+
+<iframe src="https://discordapp.com/widget?id=307485565299720193&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
