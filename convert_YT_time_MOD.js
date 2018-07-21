@@ -6,7 +6,7 @@ module.exports = {
 // This is the name of the action displayed in the editor.
 //---------------------------------------------------------------------
 
-name: "Youtube Time Converter",
+name: "Convert Youtube Time",
 
 //---------------------------------------------------------------------
 // Action Section
@@ -14,7 +14,7 @@ name: "Youtube Time Converter",
 // This is the section the action will fall into.
 //---------------------------------------------------------------------
 
-section: "Audio Control",
+section: "Mods by MythBot Staff",
 
 
 //---------------------------------------------------------------------
@@ -35,10 +35,10 @@ return `Convert into ${data.varName}`;
 	 //---------------------------------------------------------------------
 
 	 // Who made the mod (If not set, defaults to "DBM Mods")
-	 author: "General Wrex", //Idea by Tresmos
+	 author: "MythBot Staff || JoKeR#0001", //Idea by JoKeR
 
 	 // The version of the mod (Defaults to 1.0.0)
-	 version: "1.8.6", //Added in 1.8.6
+	 version: "1.8.9", //Added in 1.8.8
 
 	 // A short description to show on the mod line for this mod (Must be on a single line)
 	 short_description: "Converts YouTube Time Code into numeric time.",
@@ -92,16 +92,15 @@ html: function(isEvent, data) {
 <div>
 		<p>
 			<u>Mod Info:</u><br>
-			Created by General Wrex!
+			Created by MythBot Staff || JoKeR#0001
 		</p>
 </div><br>
 <div>
 <br>
     Youtube Time:<br>
-	<textarea id="ytTime" class="round" style="width: 35%; resize: none;" type="textarea" rows="1" cols="20"></textarea><br>
-	<div style="float: left; width: 35%;">
-		Store In:<br>
-		<select id="storage" class="round">
+    <textarea id="ytTime" class="round" style="width: 35%; resize: none;" type="textarea" rows="1" cols="20"></textarea><br>		
+    Store In:<br>
+		<select id="Storage" class="round">
 			${data.variables[1]}
 		</select>
 	</div>
